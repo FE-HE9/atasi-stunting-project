@@ -12,10 +12,10 @@ import {
     PopoverTrigger,
     PopoverContent,
     useColorModeValue,
-    useBreakpointValue,
     useDisclosure,
     Image,
   } from '@chakra-ui/react';
+  
   import {
     HamburgerIcon,
     CloseIcon,
@@ -23,7 +23,7 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   
-  export default function WithSubnavigation() {
+  export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
