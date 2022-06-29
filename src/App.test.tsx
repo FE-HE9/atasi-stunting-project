@@ -1,15 +1,22 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render ,screen} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
+import { ChakraProvider, theme } from '@chakra-ui/react';
 
-test('renders learn react link', () => {
-  const { getByText } = render(
+beforeEach(() => {
+  render (
     <Provider store={store}>
-      <App />
+      <ChakraProvider theme = {theme}>
+        <App />
+      </ChakraProvider>
     </Provider>
-  );
+  )
+});
 
-  expect(getByText(/learn/i)).toBeInTheDocument();
+test('renders button', () => {
+  
+  const textLogin = screen.getByText("Login");
+  expect(textLogin).toBeInTheDocument();
 });
