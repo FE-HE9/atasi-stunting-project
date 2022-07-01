@@ -4,7 +4,7 @@ import {
   Link,
   useColorModeValue,
 } from '@chakra-ui/react';
-import nav_item from '../Header/constant';
+import NavItem from '../Header/NavItem';
 
 const MobileNav = () => {
   return (
@@ -12,8 +12,7 @@ const MobileNav = () => {
       bg={useColorModeValue('white', 'gray.800')}
       p={4}
       display={{ md: 'none' }}>
-      {nav_item.map((navItem) => (
-        // <MobileNavItem key={navItem.label} {...navItem} />
+      {NavItem.map((navItem) => (
         <Box key={navItem.label}>
           <Link
             p={2}

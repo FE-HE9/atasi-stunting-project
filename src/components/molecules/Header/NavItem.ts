@@ -1,4 +1,4 @@
-const nav_item = [
+const NavItem = [
   {
     label: 'Home',
     href: '/',    
@@ -16,5 +16,5 @@ const nav_item = [
     href: '/simulation',
   },  
 ];
-  
-export default nav_item;
+    
+export default NavItem;
