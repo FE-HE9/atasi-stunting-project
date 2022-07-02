@@ -6,6 +6,8 @@ import Register from '../page/Register';
 import Food from "../page/Food";
 import Lifestyle from "../page/Lifestyle";
 import Simulation from "../page/Simulation";
+import StuntingDetail from "../page/StuntingDetail";
+import StuntingStatistic from "../page/StuntingStatistics";
 
 const RouterSetup = () => {
   return (
@@ -18,6 +20,8 @@ const RouterSetup = () => {
           <Route path="food" element={<Food />}/>
           <Route path="lifestyle" element={<Lifestyle />}/>
           <Route path="simulation" element={<Simulation />}/>
+          <Route path="stunting-detail" element={<StuntingDetail />}/>
+          <Route path="stunting-statistic" element={<StuntingStatistic />}/>
         </Routes>
       </Fragment>
     </Router>
