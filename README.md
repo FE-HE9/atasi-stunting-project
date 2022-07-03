@@ -41,4 +41,4 @@ yarn start
 ```
 
 ### Halaman utama akan terbuka pada port `localhost:3000` seperti dibawah ini
-<img src='./screenshoot/landing-page.jpg'>
+<img src="./screenshoot/landing-page.jpg">
