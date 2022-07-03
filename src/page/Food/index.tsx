@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import {
   Box,
   Heading,
@@ -6,27 +7,30 @@ import {
 import Card from '../../components/molecules/Card';
 import FoodList from './FoodList';
 
-export default function Food() {
+const Food = () => {
+
+  const [foods] = useState(FoodList);
+  
   return(
     <Box ml={20}
       mt={10}
     >
       <Heading mb={4}>Food Recommendation for Pregnant Woman</Heading>
       <SimpleGrid columns={3}>
-        {FoodList.map(
-          function (data) {
-            const { id, product, summary, longLine, href } = data;
-            return (
-              <Card
-                key={id}
-                product={product}
-                summary={summary}
-                longLine={longLine}
-                href={href}
-              />
-            );
-          })}
+        {foods.map((food:any) => {
+          return (
+            <Card
+              key={food.id}
+              product={food.product}
+              summary={food.summary}
+              longLine={food.longLine}
+              href={food.href}
+            />
+          );
+        })}
       </SimpleGrid>
     </Box>
   );
 }
+
+export default Food;
