@@ -33,7 +33,7 @@ export default function Footer() {
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>Page</Text>
             <Link href={'/'}>Home</Link>
             <Link href={'/food'}>Food</Link>
-            <Link href={'/health'}>Health</Link>
+            <Link href={'/lifestyle'}>Lifestyle</Link>
             <Link href={'/simulation'}>Simulation</Link>
           </SimpleGrid>
         </Stack>

@@ -13,12 +13,12 @@ import {
   HamburgerIcon,
   CloseIcon,
 } from '@chakra-ui/icons';
-
 import DesktopNav from '../DesktopNav/DesktopNav';
 import MobileNav from '../MobileNav/MobileNav'
 
 export default function Header() {
   const { isOpen, onToggle } = useDisclosure();
+
   return (
     <Box>
       <Flex
