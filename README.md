@@ -41,4 +41,4 @@ yarn start
 ```
 
 ### Halaman utama akan terbuka pada port `localhost:3000` seperti dibawah ini
-<img src="./screenshot/landing-page.jpg">
+![landing-page](https://user-images.githubusercontent.com/80946219/177044776-1ab359a2-1468-4c1b-8370-c6a63ea113e9.jpg)
