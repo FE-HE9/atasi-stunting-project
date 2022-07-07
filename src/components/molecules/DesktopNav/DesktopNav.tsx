@@ -1,8 +1,10 @@
 import {
   Box,
   HStack,
-  Link,
+  Link
 } from '@chakra-ui/react';
+
+import { Link as ReachLink} from "react-router-dom";
 
 import NavItem from '../Header/NavItem';
 
@@ -11,9 +13,9 @@ const DesktopNav = () => {
     <HStack spacing={8} >
       {NavItem.map((navitem) => (
         <Box key={navitem.label}>
-          <Link
+          <Link as={ReachLink} 
             p={2}
-            href={navitem.href}
+            to={navitem.href}
             fontSize={'sm'}
             fontWeight={500}
             _hover={{

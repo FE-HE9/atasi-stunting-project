@@ -9,6 +9,8 @@ import {
   Link
 } from "@chakra-ui/react";
 
+import { Link as ReachLink} from "react-router-dom";
+
 export default function Footer() {
   return (
     <Box id="contact"
@@ -31,10 +33,10 @@ export default function Footer() {
         <Stack align={'center'} py={5}>
           <SimpleGrid columns={1} spacing={5}>
             <Text fontWeight={'500'} fontSize={'lg'} mb={2}>Page</Text>
-            <Link href={'/'}>Home</Link>
-            <Link href={'/food'}>Food</Link>
-            <Link href={'/lifestyle'}>Lifestyle</Link>
-            <Link href={'/simulation'}>Simulation</Link>
+            <Link as={ReachLink} to={'/'}>Home</Link>
+            <Link as={ReachLink} to={'/food'}>Food</Link>
+            <Link as={ReachLink} to={'/lifestyle'}>Lifestyle</Link>
+            <Link as={ReachLink} to={'/simulation'}>Simulation</Link>
           </SimpleGrid>
         </Stack>
         <Stack align={'flex-start'} py={5}>

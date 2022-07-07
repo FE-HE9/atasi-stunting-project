@@ -4,6 +4,7 @@ import {
   Link,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { Link as ReachLink} from "react-router-dom";
 import NavItem from '../Header/NavItem';
 
 const MobileNav = () => {
@@ -14,9 +15,9 @@ const MobileNav = () => {
       display={{ md: 'none' }}>
       {NavItem.map((navItem) => (
         <Box key={navItem.label}>
-          <Link
+          <Link as={ReachLink}
             p={2}
-            href={navItem.href}
+            to={navItem.href}
             fontSize={'sm'}
             fontWeight={500}
             _hover={{

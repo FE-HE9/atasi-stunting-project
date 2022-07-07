@@ -12,10 +12,11 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  Link
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import {Link} from "react-router-dom";
+import {Link as ReachLink} from "react-router-dom";
 
 // import Footer from '../../components/molecules/Footer'
 
@@ -23,7 +24,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <Flex
-      minH={'100vh'}
+      minH={'90vh'}
       align={'center'}
       justify={'center'}
       bg={useColorModeValue('gray.50', 'gray.800')}>
@@ -87,7 +88,7 @@ export default function Login() {
             <Stack pt={6}>
               <Text align={'center'}>
                 Don&lsquo;t have an account? <span/>
-                <Link color={'blue.400'} 
+                <Link as={ReachLink} color={'blue.400'} 
                   to={"/register"}
                 >
                   Register Here</Link>
