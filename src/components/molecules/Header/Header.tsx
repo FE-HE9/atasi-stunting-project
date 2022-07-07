@@ -13,6 +13,8 @@ import {
   HamburgerIcon,
   CloseIcon,
 } from '@chakra-ui/icons';
+
+import { Link } from "react-router-dom";
 import DesktopNav from '../DesktopNav/DesktopNav';
 import MobileNav from '../MobileNav/MobileNav'
 
@@ -45,7 +47,7 @@ export default function Header() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src="asset/logo-asti.png" alt="Logo ASTI" w={100} h={50} borderRadius="full" />
+          <Image src="/asset/logo-asti.png" alt="Logo ASTI" w={100} h={50} borderRadius="full" />
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
             <DesktopNav />
           </Flex>
@@ -56,19 +58,21 @@ export default function Header() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'#2b51cb'}
-            bg={'white'}
-            border={'1px solid #2b51cb'}
-            _hover={{
-              bg: '#2b51cb',
-              color: 'white'
-            }}>
-            Login
-          </Button>
+          <Link to='/login'>
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'#2b51cb'}
+              bg={'white'}
+              border={'1px solid #2b51cb'}
+              _hover={{
+                bg: '#2b51cb',
+                color: 'white'
+              }}>
+              Login
+            </Button>
+          </Link>
         </Stack>
       </Flex>
       <Collapse in={isOpen} animateOpacity>

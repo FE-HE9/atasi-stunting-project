@@ -8,7 +8,7 @@ export default function ChartButton(props: { name: any; href: any; }) {
   const { name, href } = props;
   return(
     <Stack mr={5}>
-      <Link href={href}>
+      <Link href={href} isExternal>
         <Button>
           {name}
         </Button>

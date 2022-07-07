@@ -14,6 +14,10 @@ const NavItem = [
   {
     label: 'Simulation',
     href: '/simulation',
+  },    
+  {
+    label: 'Dashboard',
+    href: '/dashboard',
   },  
 ];
     

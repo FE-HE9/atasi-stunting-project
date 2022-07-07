@@ -11,7 +11,19 @@
     {
       "id": 1,
       "userID": 1,
-      "name": "Hani"
+      "name": "Hani",
+      "gender": "Girl",
+      "age": 12,
+      "height": "60",
+      "status": "Severely stunted"
+    },
+    {
+      "name": "aku",
+      "age": "12",
+      "gender": "Boy",
+      "height": "12",
+      "status": "Moderately stunted",
+      "id": 2
     }
   ]
 }
