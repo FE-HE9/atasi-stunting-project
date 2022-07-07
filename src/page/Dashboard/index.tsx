@@ -9,11 +9,20 @@ import {
 
 import {Link as ReachLink} from 'react-router-dom';
 import PatientList from '../../components/molecules/Patient/PatientList';
-import useFetch from './useFetch'
+import useFetch from './useFetch';
+import { useDispatch } from 'react-redux';
+import { getPatients } from './patientsSlice';
+import { useEffect } from 'react';
+import { AppDispatch } from 'app/store';
 
-
-export default function Dashboard() {
+const Dashboard = () => {
   const {data: patients, isPending, error} = useFetch('http://localhost:3001/patients');
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+    dispatch(getPatients()); 
+  }, [dispatch]);
 
   return (
     <Box
@@ -31,3 +40,4 @@ export default function Dashboard() {
     </Box>
   );
 }
+export default Dashboard;

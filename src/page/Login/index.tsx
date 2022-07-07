@@ -18,8 +18,6 @@ import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import {Link as ReachLink} from "react-router-dom";
 
-// import Footer from '../../components/molecules/Footer'
-
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
@@ -55,8 +53,10 @@ export default function Login() {
           maxW={'m'}>
           <Stack spacing={4}>
             <FormControl id="username" isRequired>
-              <FormLabel>Username</FormLabel>
-              <Input type="text" />
+              <FormLabel>
+                Username
+              </FormLabel>
+              <Input type="text" data-testid="element"/>
             </FormControl>
             <FormControl id="password" isRequired>
               <FormLabel>Password</FormLabel>
