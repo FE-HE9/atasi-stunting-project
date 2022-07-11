@@ -31,13 +31,15 @@ atau
 yarn install
 ```
 
-### Setelah penginstalan selesai, start aplikasi 
+### Setelah penginstalan selesai, start aplikasi dan db
 ```bash
 npm start
+npm db
 ```
 atau
 ```bash  
 yarn start
+yarn db
 ```
 
 ### Halaman utama akan terbuka pada port `localhost:3000` seperti dibawah ini
